@@ -1,0 +1,31 @@
+//--Подключение файлов--
+@import "vars";
+@import "null";
+@import "libs";
+@import "fonts";
+// --
+
+// ==Стили==
+
+// --Разметка--
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    background-color: $g-black;
+}
+.container {
+    max-width: 1920px;
+    min-width: $minwidth;
+    margin: 0 auto;
+    z-index: 2;
+}
+//--
+
+// --Основные стили--
+body.lock{
+    overflow: hidden;
+}
+
+//--
+
+@import "media";
