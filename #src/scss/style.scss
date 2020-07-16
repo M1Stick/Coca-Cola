@@ -11,10 +11,11 @@
 .wrapper {
     min-height: 100%;
     overflow: hidden;
-    background-color: $g-black;
+    background-color: $black;
 }
 .container {
-    max-width: 1920px;
+    max-width: 1441px;
+    padding: 0 49px;
     min-width: $minwidth;
     margin: 0 auto;
     z-index: 2;
@@ -25,7 +26,261 @@
 body.lock{
     overflow: hidden;
 }
+.header{
+    width: 100%;
+    &__row{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 100;
+        padding-top: 43px;
+    }
+    &__logo{
+        &-link{
 
+        }
+        &-img{
+            width: 198px;
+            height: 65px;
+        }
+    }
+    &__nav{
+        &-list{
+            display: flex;
+        }
+        &-item{
+            padding-right: 35px;
+        }
+        &-link{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: $white;
+            &:hover{
+                transition: 0.5s all;
+                color: $red;
+            }
+        }
+    }
+    &__burger{
+        &-close{
+
+        }
+        &-list{
+
+        }
+        &-item{
+
+        }
+        &-link{
+            
+        }
+    }
+}
+.main{
+    width: 100%;
+    padding-top: 180px;
+    padding-bottom: 138px;
+    &__row{
+        display: flex;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline; 
+        padding-left: 99px;
+        padding-right: 69px;
+        z-index: 2;
+        
+        &-head{
+            font-family: $risque;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 72px;
+            line-height: 83px;
+            color: $white;
+        }
+        &-text{
+            font-family: $risque;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 38px;
+            line-height: 44px;
+            color: $white;
+            padding-bottom: 27px;
+        }
+        &-link{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: $white;
+            border: 2px solid $white;
+            border-radius: 20px 20px 20px 0px;
+            padding: 13px 41px;
+            &:hover{
+                transition: 0.5s all;
+                background-color: $white;
+                color: transparent;
+            }
+        }
+    }
+    &__replic{
+        background: url(../img/cloud.png) no-repeat;
+        margin-top: 162px;
+        z-index: 2;
+        &-text{
+            font-family: $risque;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 21px;
+            color: black;    
+            padding: 64px 50px;
+        }
+    }
+    &__images{
+        display: flex;
+        align-items: center;
+        z-index: 1;
+        &-snow{
+            max-width: 100%;
+            animation-name: main-snow;
+            padding-right: 259px;
+            position: absolute;
+            top: 29%;
+            left: 12%;
+            z-index: 1;
+        }
+        &-claus{
+            max-width: 100%;
+            position: absolute;
+            right: 12%;
+            top: 20%;
+            z-index: 1;
+        }
+        &-arrow{
+            max-width: 100%;
+            position: absolute;
+            left: 20%;
+            top: 74%;
+            z-index: 1;
+        }
+    }
+}
+.description{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/description-bg.png) center no-repeat;
+    &__row{
+        display: flex;
+        padding-top: 289px;
+    }
+    &__content{
+        padding-left: 28px;
+        padding-right: 75px;
+        &-head{
+            font-family: $risque;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 56px;
+            line-height: 65px;
+            color: $white;
+            padding-bottom: 30px;
+        }
+        &-text{
+            font-family: $risque;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 38px;
+            line-height: 44px;
+            color: $white;
+            padding-bottom: 30px;
+        }
+        &-images{
+            & img{
+                border: 5px solid $white;
+                border-radius: 100%;
+                background-color: $white;
+                margin-right: 35px;
+                &:hover,
+                &:active{
+                    transition: 0.5s all;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+            &-sock{
+                padding: 14px 44px 14px 36px;
+            }
+            &-cap{
+                padding: 28px 10px 28px 16px;
+            }
+            &-bag{
+                padding: 21px 20px 28px 34px;
+            }        
+        }
+    }
+    &__item{
+        width: 553px;
+        height: 405px;
+        display: flex;
+        border: 3px solid $white;
+        border-radius: 20px;
+        &-content{
+            display: flex;
+            flex-direction: column;
+            padding-top: 58px;
+            padding-left: 35px;
+        }
+        &-head{
+            font-family: $risque;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 42px;
+            line-height: 49px;
+            color: $white;
+            padding-bottom: 29px;
+        }
+        &-text{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 28px;
+            line-height: 33px;
+            color: $white;
+            padding-right: 31px;
+        }
+        &-img{
+            width: 148px;
+            height: 257px;
+            margin-top: 81px;
+        }
+    }
+}
+// Анимации
+@keyframes main-snow{
+    0%{
+        transform: rotate(0deg);
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    50%{
+        transform: rotate(180deg);
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    100%{
+        transform: rotate(360deg);
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+}
+// --
 //--
-
 @import "media";
