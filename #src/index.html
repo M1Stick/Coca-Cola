@@ -7,11 +7,12 @@
     <title>Coca-Cola</title>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <div class="wrapper">
-        <header class="header">
+    <div class="wrapper" id="fullpage">
+        <header class="header" data="section1">
             <div class="container">
                 <div class="header__row">
                     <div class="header__logo">
@@ -20,50 +21,58 @@
                         </a>
                     </div>
                     <div class="header__nav">
-                        <ul class="header__nav-list">
+                        <ul class="header__nav-list" id="menu">
                             <li class="header__nav-item">
-                                <a class="header__nav-link" href="#">
+                                <a class="header__nav-link" href="#section2">
                                     Main
                                 </a>
                             </li>
                             <li class="header__nav-item">
-                                <a class="header__nav-link" href="#">
+                                <a class="header__nav-link" href="#section3">
                                     About
                                 </a>
                             </li>
                             <li class="header__nav-item">
-                                <a class="header__nav-link" href="#">
+                                <a class="header__nav-link" href="#section4">
                                     Products
                                 </a>
                             </li>
                             <li class="header__nav-item">
-                                <a class="header__nav-link" href="#">
+                                <a class="header__nav-link" href="tel:+380999999999">
                                     Contacts
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="header__burger">
-                        <a class="header__burger-close" href="#"></a>
-                        <ul class="header__burger-list">
-                            <li class="header__burger-item">
-                                <a class="header__burger-link" href="#"></a>
-                            </li>
-                            <li class="header__burger-item">
-                                <a class="header__burger-link" href="#"></a>
-                            </li>
-                            <li class="header__burger-item">
-                                <a class="header__burger-link" href="#"></a>
-                            </li>
-                            <li class="header__burger-item">
-                                <a class="header__burger-link" href="#"></a>
-                            </li>
-                        </ul>
+                        <span></span>
                     </div>
+                    <ul class="header__burger-list">
+                        <li class="header__burger-item">
+                            <a class="header__burger-link" href="#section2">
+                                Home
+                            </a>
+                        </li>
+                        <li class="header__burger-item">
+                            <a class="header__burger-link" href="#section3">
+                                About
+                            </a>
+                        </li>
+                        <li class="header__burger-item">
+                            <a class="header__burger-link" href="#section4">
+                                Products
+                            </a>
+                        </li>
+                        <li class="header__burger-item">
+                            <a class="header__burger-link" href="tel:+380999999999">
+                                Contacts
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </header>
-        <section class="main">
+        <section class="main" id="section2">
             <div class="container">
                 <div class="main__row">
                     <div class="main__content">
@@ -82,11 +91,11 @@
                 <div class="main__images">
                     <img class="main__images-snow" src="./img/header__snow.png" alt="main snow">
                     <img class="main__images-claus" src="./img/claus.png" alt="main claus">
-                    <img class="main__images-arrow" src="./img/arrow.png" alt="main arrow">
+                    <a class ="main__images-link" href="#section3" id="arrow"><img class="main__images-arrow" src="./img/arrow.png" alt="main arrow"></a>
                 </div>
             </div>
         </section>
-        <section class="description">
+        <section class="description" id="section3">
             <div class="container">
                 <div class="description__row">
                     <div class="description__content">
@@ -109,7 +118,7 @@
                                 Best sock ever
                             </h2>
                             <p class="description__item-text">
-                                Reuglar sock have no<br>
+                                Regular sock have no<br>
                                 present inside<br> 
                                 Lorem Ipsum is simply<br>
                                 dumm y text of the<br> 
@@ -117,13 +126,42 @@
                                 industry. Lorem  
                             </p>
                         </div>
-                        <img class="description__item-img" src="./img/new-year-sock 2.png" alt="description item sock" >
+                        <img class="description__item-img" src="./img/new-year-sock 2.png" alt="description item sock">
                     </div>
                 </div>
             </div>
         </section>
+        <section class="writeus">
+            <div class="container">
+                <div class="writeus__row">
+                    <h2 class="writeus__head">
+                        Write us<br>
+                        for real presents
+                    </h2>
+                    <form class="writeus__form" action="" method="post" id="section4">
+                        <div class="writeus__form-info">
+                            <div class="writeus__form-name">
+                                <input type="text" name="name" id="name" placeholder="Name">
+                                <select name="gender" id="gender">Gender</select>
+                            </div>
+                            <div class="writeus__form-contact">
+                                <input type="tel" name="phone" id="phone" placeholder="Phone">
+                                <input type="email" name="email" id="email" placeholder="Email">
+                            </div>
+                        </div>
+                        <textarea name="textarea" id="textarea" cols="50" rows="5" placeholder="Your wish"></textarea>
+                        <div class="writeus__form-checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox">
+                            <label for="checkbox">Whant Coca-cola with present ?</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="./js/script.js"></script>
 </body>

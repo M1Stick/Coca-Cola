@@ -28,16 +28,16 @@ body.lock{
 }
 .header{
     width: 100%;
+    position: fixed;
+    z-index: 100;
     &__row{
-        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        position: fixed;
-        z-index: 100;
         padding-top: 43px;
     }
     &__logo{
+        flex: 0 0 40%;
         &-link{
 
         }
@@ -66,24 +66,92 @@ body.lock{
         }
     }
     &__burger{
-        &-close{
-
-        }
-        &-list{
-
-        }
-        &-item{
-
-        }
-        &-link{
-            
+            display: block;
+            position: relative;
+            width: 61px;
+            height: 60px;
+            background: no-repeat url(../img/burger-bg.png);
+            cursor: pointer;
+            transition: 1s all;
+            & span{
+                content: '';
+                position: absolute;
+                width: 50%;
+                height: 3px;
+                top: 30px;
+                left: 25%;
+                background-color: $white;
+                z-index: 100;
+                transition: 1s all;
+            }
+            &::before,&::after{
+                content: '';
+                transition: all .5s;
+                background-color: #fffF;
+                position: absolute;
+                width: 50%;
+                height: 3px;
+                left: 25%;
+                transition: 1s all;
+                z-index: 3;
+            }
+            &::before{
+                top: 20px;
+                z-index: 3;
+            }
+            &::after{
+                top: 40px;
+                z-index: 3;
+            }
+            &.active span{
+                transition: 1s all;
+                transform: scale(0);
+                z-index: 3;
+            }
+            &.active::before{
+                transition: 1s all;
+                top: 30px;
+                transform: rotate(-45deg);
+                z-index: 3;
+            }
+            &.active::after{
+                transition: 1s all;
+                top: 30px;
+                transform: rotate(45deg);
+                z-index: 3;
+            }
+            &-list{
+                height: 100vh;
+                width: 32%;
+                top: 0%;
+                right: 12.35%;
+                position: fixed;
+                display: flex;
+                flex-direction: column;
+                background-color: #eb5757;
+                z-index: 2;
+                padding-top: 10rem;
+                padding-left: 15rem;
+                clip-path: circle(1000px at 160% -150%);
+                transition: all 1s ease-out;
+                visibility: hidden;
+            }
+            &-item{
+                padding-bottom: 38px;
+            }
+            &-link{
+                font-family: $risque;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 32px;
+                line-height: 37px;
+                color: #FFFFFF;
+            }
         }
     }
-}
 .main{
     width: 100%;
     padding-top: 180px;
-    padding-bottom: 138px;
     &__row{
         display: flex;
     }
@@ -91,8 +159,9 @@ body.lock{
         display: flex;
         flex-direction: column;
         align-items: baseline; 
-        padding-left: 99px;
+        padding-left: 100px;
         padding-right: 69px;
+        padding-top: 25px;
         z-index: 2;
         
         &-head{
@@ -102,6 +171,8 @@ body.lock{
             font-size: 72px;
             line-height: 83px;
             color: $white;
+            margin: 0;
+            padding-bottom: 20px;
         }
         &-text{
             font-family: $risque;
@@ -150,34 +221,39 @@ body.lock{
             max-width: 100%;
             animation-name: main-snow;
             padding-right: 259px;
-            position: absolute;
-            top: 29%;
-            left: 12%;
+            position: relative;
+            top: -22rem;
+            left: -3rem;
             z-index: 1;
         }
         &-claus{
             max-width: 100%;
-            position: absolute;
-            right: 12%;
-            top: 20%;
+            position: relative;
+            right: 3rem;
+            top: -22rem;
             z-index: 1;
         }
-        &-arrow{
+        &-link{
             max-width: 100%;
-            position: absolute;
-            left: 20%;
-            top: 74%;
+            position: relative;
+            right: 83rem;
+            top: -10rem;
             z-index: 1;
+            transition: 1s all;
+        }
+        &-arrow{
+            
         }
     }
 }
 .description{
     width: 100%;
-    height: 100vh;
-    background: url(../img/description-bg.png) center no-repeat;
+    background: center no-repeat url(../img/description-bg.png);
+    margin-top: -352px;
     &__row{
         display: flex;
-        padding-top: 289px;
+        padding-top: 189px;
+        padding-bottom: 166px;
     }
     &__content{
         padding-left: 28px;
@@ -260,6 +336,87 @@ body.lock{
             width: 148px;
             height: 257px;
             margin-top: 81px;
+        }
+    }
+}
+.writeus{
+    width: 100%;
+    background: url(../img/write-us-bg.png) center no-repeat;
+    padding-top: 320px;
+    padding-left: 45px;
+    padding-bottom: 300px;
+    margin-top: -182px;
+    &__row{
+        display: flex;
+        flex-direction: column;
+    }
+    &__head{
+        font-family: $risque;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 56px;
+        line-height: 65px;
+        color: $white;
+        padding-bottom: 29px;
+    }
+    &__form{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        &-info,
+        &-checkbox{
+            display: flex;
+            flex-direction: row;
+        }
+        &-name,
+        &-contact{
+            display: flex;
+            flex-direction: column;
+        }
+        &-name{
+            padding-right: 18px;
+        }
+        & input,
+        textarea,
+        select{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: $white;
+            border: 3px solid $white;
+            border-radius: 15px;
+            background-color: transparent;
+            padding: 15px 0 15px 22px;
+            margin-bottom: 20px;
+            &::placeholder{
+                color: $white;
+            }
+        }
+        & input:selected{
+            background-color: transparent;
+        }
+        & select{
+
+        }
+        & textarea{
+
+        }
+        & input[type=checkbox]{
+            margin-right: 7px;
+            background: #FFFFFF;
+            border: 2px solid #D02B2B;
+            border-radius: 3px;
+            color: #D02B2B;
+        }
+        & label{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: $white;
+            color: #D02B2B;
+            margin-top: -2px;
         }
     }
 }
