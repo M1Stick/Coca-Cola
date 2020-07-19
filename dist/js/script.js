@@ -10,13 +10,13 @@ $(document).ready(function() {
         $('body').toggleClass('lock'),
         $('.header__burger').toggleClass('active'),
         $('.header__burger-list').toggleClass('active'),
-        $('.header__burger-list').css({'clip-path':'circle(2500px at 160% -101%)','visibility':'inherit'})
+        $('.header__burger-list').css({'clip-path':'circle(200rem at 160% -101%)','visibility':'inherit'})
     })
   });
 
 $(document).ready(function() {
-    $('.header__burger .active').click(function() {
-        $('.header__burger-list .active').css({'clip-path':'circle(1000px at 160% -101%)','visibility':'hidden'}),
+    $('.header__burger.active::after').click(function() {
+        $('.header__burger-list .active').css({'clip-path':'circle(0rem at 160% -101%)','visibility':'hidden'}),
         $('body').removeClass('lock')
     })
 });
