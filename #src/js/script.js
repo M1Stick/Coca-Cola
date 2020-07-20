@@ -69,4 +69,3 @@ $(document).bind( 'mousewheel', function (e) {
   });
 
 @@include('_snow.js')
-@@include('_stars.js')
