@@ -15,7 +15,7 @@ $(document).ready(function() {
   });
 
 $(document).ready(function() {
-    $('.header__burger.active::after').click(function() {
+    $('.header__burger.active').click(function() {
         $('.header__burger-list .active').css({'clip-path':'circle(0rem at 160% -101%)','visibility':'hidden'}),
         $('body').removeClass('lock')
     })

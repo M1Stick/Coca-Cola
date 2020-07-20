@@ -1,10 +1,16 @@
 @media (max-width: 1366px){
     .description{
-        margin-top: -448px;
+        margin-top: -382px;
+        margin-bottom: 162px;
     }
     .writeus{
         margin-top: -192px;
-        margin-bottom: -94px;
+        margin-bottom: 161px;
+        &__form{
+            & textarea{
+                width: 36%;
+            }
+        }
     }
 }
 @media (max-width: 1024px){
@@ -31,12 +37,12 @@
     }
     .description{
         background-size: cover;
-        height: 150vh;
-        margin-bottom: 96px;
+        margin-bottom: 141px;
+        margin-top: -448px;
         &__row{
             display: flex;
             flex-direction: column;
-            padding-top: 150px;
+            padding-top: 300px;
         }
         &__item{
             display: flex;
@@ -72,8 +78,14 @@
             }
         }
     .writeus{
-            padding-left: 0;
-            margin-bottom: -95px;
+        padding-left: 0;
+        margin-top: -141px;
+        margin-bottom: 503px;
+            &__form{
+                & textarea{
+                    width: 47%;
+                }
+            }
     }
 }
 @media (max-width: 768px){
@@ -110,10 +122,11 @@
     }
     .description{
         margin-top: -88px;
-        margin-bottom: -96px;
-        &__row{
+        margin-bottom: 228px;
+        &__row{      
             display: flex;
             flex-direction: column;
+            padding-top: 150px;
         }
         &__item{
             display: flex;
@@ -148,7 +161,21 @@
         }
     }
     .writeus{
-        margin-bottom: -134px;
+        margin-bottom: 0px;
+        margin-top: -228px;
+        background-size: cover;
+        padding-top: 178px;
+        &__form{
+            &-info{
+                flex-direction: column;
+            }
+            &-name{
+                padding: 0em;
+            }
+            & textarea{
+                width: 100%;
+            }
+        }
     }
 }
 @media (max-width: 736px){
@@ -158,20 +185,174 @@
 
 }
 @media (max-width: 640px){
-
+    .description{
+        &__content{
+            &-head{
+                font-size: 43px;
+            }
+            &-text{
+                font-size: 34px;
+            }
+            &-images{
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
 } 
 @media (max-width: 568px){
-
+    .description{
+        margin-top: -88px;
+        margin-bottom: 185px;
+        &__content{
+            margin: 0 1px;
+            &-head{
+                font-size: 43px;
+            }
+            &-text{
+                font-size: 34px;
+            }
+            &-images{
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    .writeus{
+        margin-top: -185px;
+    }
+}
+@media (max-width: 505px){
+    .description{
+        &__content{
+            &-head{
+                font-size: 52px;
+                line-height: 60px;
+            }
+            &-text{
+                font-size: 28px;
+                line-height: 32px;
+            }
+            &-images{
+                & img{
+                    margin-right: 25px;
+                }
+                &-sock{
+                    padding: 10px 32px 10px 32px;
+                }
+                &-cap{
+                    padding: 20px 6px 21px 6px;
+                }
+                &-bag{
+                    padding: 15px 15px 21px 25px;
+                }
+                & img:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+        &__item{
+            &-head{
+                font-size: 42px;
+                line-height: 49px;
+            }
+            &-text{
+                font-size: 28px;
+                line-height: 33px;
+            }
+        }
+    }
+    .writeus{
+        &__head{
+            font-size: 52px;
+        }
+        & input,
+        textarea,
+        select{
+            font-size: 20px;
+            line-height: 23px;
+        }
+        & label{
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
 } 
 @media (max-width: 414px){
-
+    .description{
+        &__content{
+            &-head{
+                font-size: 52px;
+                line-height: 60px;
+            }
+            &-text{
+                font-size: 28px;
+                line-height: 32px;
+            }
+            &-images{
+                flex-direction: column;
+                & img{
+                    margin: 0;
+                }
+            }
+        }
+        &__item{
+            &-head{
+                font-size: 42px;
+                line-height: 49px;
+            }
+            &-text{
+                font-size: 28px;
+                line-height: 33px;
+            }
+        }
+    }
+    .writeus{
+        margin-bottom: -9px;
+        margin-top: -185px;
+        &__head{
+            font-size: 52px;
+        }
+        & input,
+        textarea,
+        select{
+            font-size: 20px;
+            line-height: 23px;
+        }
+        & label{
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
 } 
 @media (max-width: 375px){
 
 } 
 @media (max-width: 360px){
-
+    .writeus{
+        & label{
+            font-size: 16px;
+        }
+    }
 } 
 @media (max-width: 320px){
-
+    .header{
+        &__logo{
+            &-img{
+                width: 150px;
+            }
+        }
+    }
+    .description{
+        &__item{
+            &-text{
+                font-size: 24px;
+            }
+        }
+    }
+    .writeus{
+        & label{
+            font-size: 14px;
+        }
+    }
 } 

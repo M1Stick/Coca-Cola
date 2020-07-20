@@ -43,7 +43,6 @@ body.lock{
         }
         &-img{
             width: 198px;
-            height: 65px;
         }
     }
     &__nav{
@@ -69,7 +68,7 @@ body.lock{
             display: block;
             position: relative;
             width: 61px;
-            height: 61px;
+            height: 62px;
             background: no-repeat url(../img/burger-bg.png);
             cursor: pointer;
             transition: 1s all;
@@ -248,9 +247,9 @@ body.lock{
 }
 .description{
     width: 100%;
-    height: 100vh;
     background: center no-repeat url(../img/description-bg.png);
-    margin-top: -448px;
+    margin-top: -352px;
+    margin-bottom: 191px;
     &__row{
         display: flex;
         padding-top: 189px;
@@ -306,44 +305,44 @@ body.lock{
     }
     &__item{
         display: flex;
+        align-items: center;
         border: 3px solid $white;
         border-radius: 20px;
         &-content{
             display: flex;
             flex-direction: column;
-            padding-top: 58px;
             padding-left: 35px;
         }
         &-head{
             font-family: $risque;
             font-style: normal;
-            font-weight: normal;
+            font-weight: 400;
             font-size: 42px;
             line-height: 49px;
-            color: $white;
+            color: #fffF;
             padding-bottom: 29px;
         }
         &-text{
             font-style: normal;
-            font-weight: normal;
+            font-weight: 400;
             font-size: 28px;
             line-height: 33px;
-            color: $white;
+            color: #fffF;
             padding-right: 31px;
         }
         &-img{
-            margin-top: 81px;
+            width: 148px;
+            height: 256px;
+            margin-right: 35px;
         }
     }
 }
 .writeus{
     width: 100%;
-    height: 100vh;
     background: url(../img/write-us-bg.png) center no-repeat;
-    padding-top: 275px;
+    padding-top: 70px;
     padding-left: 45px;
     margin-top: -191px;
-    margin-bottom: -95px;
     &__row{
         display: flex;
         flex-direction: column;
@@ -358,7 +357,7 @@ body.lock{
         padding-bottom: 29px;
     }
     &__form{
-        width: 20%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         &-info,
@@ -391,21 +390,26 @@ body.lock{
                 color: $white;
             }
         }
+        & textarea{
+            width: 32.5%;
+        }
         & input:selected{
             background-color: transparent;
         }
         & select{
-
+            cursor: pointer;
+            & option{             
+                color: #D02B2B;
+            }
         }
         & textarea{
 
         }
-        & input[type=checkbox]{
-            margin-right: 7px;
-            background: #FFFFFF;
-            border: 2px solid #D02B2B;
+        & input[type=checkbox]{      
             border-radius: 3px;
-            color: #D02B2B;
+            background: transparent;
+            border: 2px solid #D02B2B;
+            margin-right: 7px;
         }
         & label{
             font-style: normal;
